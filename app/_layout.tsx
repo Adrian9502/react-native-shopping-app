@@ -29,35 +29,39 @@ export default function RootLayout() {
         }}
       />
       <Tabs.Screen
-        name="Like"
+        name="(tabs)/Like"
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="heart" size={24} color={color} />
           ),
+          tabBarLabel: "Like",
         }}
       />
       <Tabs.Screen
-        name="Message"
+        name="(tabs)/Message"
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="message1" size={24} color={color} />
           ),
+          tabBarLabel: "Message",
         }}
       />
       <Tabs.Screen
-        name="Cart"
+        name="(tabs)/Cart"
         options={{
           tabBarIcon: ({ color }) => (
             <Feather name="shopping-cart" size={24} color={color} />
           ),
+          tabBarLabel: "Cart",
         }}
       />
       <Tabs.Screen
-        name="Account"
+        name="(tabs)/Account"
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="user" size={24} color={color} />
           ),
+          tabBarLabel: "Account",
         }}
       />
     </Tabs>

@@ -4,7 +4,7 @@ import React from "react";
 const Like = () => {
   return (
     <View className="bg-black">
-      <Text>Like</Text>
+      <Text className="text-red-600 p-10">Like</Text>
     </View>
   );
 };
