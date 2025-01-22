@@ -5,7 +5,7 @@ interface Product {
   description: string;
   price: number;
   rating: number;
-  stock: number;
+  sold: number;
   thumbnail: string | ImageSourcePropType;
 }
 export const getRandomProducts = (

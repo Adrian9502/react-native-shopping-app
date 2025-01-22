@@ -34,7 +34,6 @@ export const products: Product[] = [
   },
   {
     id: 2,
-
     title: "Bathtowel",
     description: "Description for Bathtowel",
     price: 99.26,
