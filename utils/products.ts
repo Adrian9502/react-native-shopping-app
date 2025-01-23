@@ -21,7 +21,7 @@ interface Product {
   thumbnail: any;
 }
 
-export const products: Product[] = [
+export const products: readonly Product[] = [
   {
     id: 1,
     title: "50ml Oil based Perfume Inspired Collections long lasting",
