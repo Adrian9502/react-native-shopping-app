@@ -369,79 +369,67 @@ export default function Home() {
   return (
     <>
       <StatusBar translucent backgroundColor="black" barStyle="light-content" />
-      <ScrollView
+
+      <FlatList
+        data={randomProducts2}
+        keyExtractor={(product) => product.id.toString()}
+        ListHeaderComponent={renderHeader}
         showsVerticalScrollIndicator={false}
-        showsHorizontalScrollIndicator={false}
-        className=" bg-black "
-      >
-        {/* Recommendation */}
-        <View>
-          <FlatList
-            data={randomProducts2}
-            keyExtractor={(product) => product.id.toString()}
-            ListHeaderComponent={renderHeader}
-            showsVerticalScrollIndicator={false}
-            numColumns={2}
-            columnWrapperStyle={{
-              justifyContent: "space-between",
-              marginBottom: 10,
-            }}
-            className="flex-1 mt-12 bg-black"
-            renderItem={({ item: product }) => {
-              return (
-                <View className="bg-neutral-900/50 rounded-lg mt-2 flex-1 mx-2">
-                  <View className="relative">
-                    <Image
-                      className="rounded-xl"
-                      source={
-                        typeof product.thumbnail === "string"
-                          ? { uri: product.thumbnail }
-                          : product.thumbnail
-                      }
-                      style={{ width: "100%", height: 200 }}
-                    />
-                    <View className="absolute rounded-bl-lg bottom-0 gap-2 bg-emerald-500 flex flex-row">
-                      <FreeShipping
-                        icon={
-                          <FontAwesome5
-                            name="shipping-fast"
-                            size={14}
-                            color="white"
-                          />
-                        }
-                        text="Free Shipping"
+        numColumns={2}
+        columnWrapperStyle={{
+          justifyContent: "space-between",
+          marginBottom: 10,
+        }}
+        className="flex-1 mt-12 bg-black"
+        renderItem={({ item: product }) => {
+          return (
+            <View className="bg-neutral-900/50 rounded-lg mt-2 flex-1 mx-2">
+              <View className="relative">
+                <Image
+                  className="rounded-xl"
+                  source={
+                    typeof product.thumbnail === "string"
+                      ? { uri: product.thumbnail }
+                      : product.thumbnail
+                  }
+                  style={{ width: "100%", height: 200 }}
+                />
+                <View className="absolute rounded-bl-lg bottom-0 gap-2 bg-emerald-500 flex flex-row">
+                  <FreeShipping
+                    icon={
+                      <FontAwesome5
+                        name="shipping-fast"
+                        size={14}
+                        color="white"
                       />
-                      <Text className="text-white p-1 bg-yellow-500 rounded-tr-lg">
-                        COINS
-                      </Text>
-                    </View>
-                  </View>
-                  <View className="mt-2 gap-2 px-2 py-1 flex flex-col justify-start rounded-lg">
-                    <Text className="text-white flex-1 text-lg font-bold">
-                      {product.title}
-                    </Text>
-                    <Text className="text-pink-600 flex-1 text-xl font-extrabold">
-                      &#8369;{product.price}
-                    </Text>
-                    <Text className="text-yellow-600 flex-1 text-sm">
-                      1.6k+ Good Ratings online
-                    </Text>
-                    <View className="flex flex-row gap-1 items-center">
-                      <AntDesign name="star" size={17} color="yellow" />
-                      <Text className="text-gray-500">
-                        {product.rating}(1678)
-                      </Text>
-                      <Text className="text-gray-500">
-                        {product.sold}.5k sold
-                      </Text>
-                    </View>
-                  </View>
+                    }
+                    text="Free Shipping"
+                  />
+                  <Text className="text-white p-1 bg-yellow-500 rounded-tr-lg">
+                    COINS
+                  </Text>
                 </View>
-              );
-            }}
-          />
-        </View>
-      </ScrollView>
+              </View>
+              <View className="mt-2 gap-2 px-2 py-1 flex flex-col justify-start rounded-lg">
+                <Text className="text-white flex-1 text-lg font-bold">
+                  {product.title}
+                </Text>
+                <Text className="text-pink-600 flex-1 text-xl font-extrabold">
+                  &#8369;{product.price}
+                </Text>
+                <Text className="text-yellow-600 flex-1 text-sm">
+                  1.6k+ Good Ratings online
+                </Text>
+                <View className="flex flex-row gap-1 items-center">
+                  <AntDesign name="star" size={17} color="yellow" />
+                  <Text className="text-gray-500">{product.rating}(1678)</Text>
+                  <Text className="text-gray-500">{product.sold}.5k sold</Text>
+                </View>
+              </View>
+            </View>
+          );
+        }}
+      />
     </>
   );
 }
