@@ -12,8 +12,8 @@ This is a React Native project that replicates the UI of the Lazada Mobile App. 
 
 ## Built with:
 
-- **React-Native(Typescript)**: Displays featured products and categories.
-- **NativeWind**: Section for favorited items.
+- **React-Native(Typescript)**: A framework for building cross-platform mobile apps using JavaScript and React
+- **NativeWind**: A utility-first CSS framework for styling React Native apps with simple, reusable classes.
 
 ### Installation:
 
@@ -53,3 +53,7 @@ npx react-native run-ios
 
 ![Lazada Mobile UI](./overview.png)
 ![Lazada Mobile UI](./overview1.png)
+
+### APK LINK
+
+[Click here to download](https://www.example.com)
