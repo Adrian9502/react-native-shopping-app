@@ -56,4 +56,4 @@ npx react-native run-ios
 
 ### APK LINK
 
-[Click here to download](https://www.example.com)
+[Click here to download](https://expo.dev/artifacts/eas/5yCEQvCE8R5yd16yaEnf9J.apk)
